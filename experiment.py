@@ -30,7 +30,7 @@ def run():
         db.close()
     Path("results").mkdir(exist_ok=True)
     with open("results/results.csv", "w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=rows[0].keys())
+        writer = csv.DictWriter(f, fieldnames=rows[0].keys(), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     Path("results/results.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
