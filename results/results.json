@@ -1,0 +1,130 @@
+[
+  {
+    "case": "normal",
+    "mode": "vulnerable",
+    "username": "student",
+    "password": "demo-pass",
+    "success": true,
+    "status": "accepted"
+  },
+  {
+    "case": "normal",
+    "mode": "secure",
+    "username": "student",
+    "password": "demo-pass",
+    "success": true,
+    "status": "accepted"
+  },
+  {
+    "case": "wrong_password",
+    "mode": "vulnerable",
+    "username": "student",
+    "password": "wrong",
+    "success": false,
+    "status": "rejected"
+  },
+  {
+    "case": "wrong_password",
+    "mode": "secure",
+    "username": "student",
+    "password": "wrong",
+    "success": false,
+    "status": "rejected"
+  },
+  {
+    "case": "unknown_user",
+    "mode": "vulnerable",
+    "username": "nobody",
+    "password": "wrong",
+    "success": false,
+    "status": "rejected"
+  },
+  {
+    "case": "unknown_user",
+    "mode": "secure",
+    "username": "nobody",
+    "password": "wrong",
+    "success": false,
+    "status": "rejected"
+  },
+  {
+    "case": "empty_username",
+    "mode": "vulnerable",
+    "username": "",
+    "password": "demo-pass",
+    "success": false,
+    "status": "empty_input"
+  },
+  {
+    "case": "empty_username",
+    "mode": "secure",
+    "username": "",
+    "password": "demo-pass",
+    "success": false,
+    "status": "empty_input"
+  },
+  {
+    "case": "empty_password",
+    "mode": "vulnerable",
+    "username": "student",
+    "password": "",
+    "success": false,
+    "status": "empty_input"
+  },
+  {
+    "case": "empty_password",
+    "mode": "secure",
+    "username": "student",
+    "password": "",
+    "success": false,
+    "status": "empty_input"
+  },
+  {
+    "case": "quote_error",
+    "mode": "vulnerable",
+    "username": "'",
+    "password": "wrong",
+    "success": false,
+    "status": "query_error"
+  },
+  {
+    "case": "quote_error",
+    "mode": "secure",
+    "username": "'",
+    "password": "wrong",
+    "success": false,
+    "status": "rejected"
+  },
+  {
+    "case": "login_bypass",
+    "mode": "vulnerable",
+    "username": "student' -- ",
+    "password": "wrong",
+    "success": true,
+    "status": "accepted"
+  },
+  {
+    "case": "login_bypass",
+    "mode": "secure",
+    "username": "student' -- ",
+    "password": "wrong",
+    "success": false,
+    "status": "rejected"
+  },
+  {
+    "case": "ordinary_apostrophe",
+    "mode": "vulnerable",
+    "username": "o'connor",
+    "password": "wrong",
+    "success": false,
+    "status": "query_error"
+  },
+  {
+    "case": "ordinary_apostrophe",
+    "mode": "secure",
+    "username": "o'connor",
+    "password": "wrong",
+    "success": false,
+    "status": "rejected"
+  }
+]

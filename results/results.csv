@@ -1,0 +1,17 @@
+﻿case,mode,username,password,success,status
+normal,vulnerable,student,demo-pass,True,accepted
+normal,secure,student,demo-pass,True,accepted
+wrong_password,vulnerable,student,wrong,False,rejected
+wrong_password,secure,student,wrong,False,rejected
+unknown_user,vulnerable,nobody,wrong,False,rejected
+unknown_user,secure,nobody,wrong,False,rejected
+empty_username,vulnerable,,demo-pass,False,empty_input
+empty_username,secure,,demo-pass,False,empty_input
+empty_password,vulnerable,student,,False,empty_input
+empty_password,secure,student,,False,empty_input
+quote_error,vulnerable,',wrong,False,query_error
+quote_error,secure,',wrong,False,rejected
+login_bypass,vulnerable,student' -- ,wrong,True,accepted
+login_bypass,secure,student' -- ,wrong,False,rejected
+ordinary_apostrophe,vulnerable,o'connor,wrong,False,query_error
+ordinary_apostrophe,secure,o'connor,wrong,False,rejected
